@@ -10,7 +10,7 @@ float f(float y ){
 int main() {
     float  a=0 , b=0,x,err ;
     do {
-        cout <<"inserire estremi"<< endl;
+        cout <<"Inserire estremi"<< endl;
         cin >> a >> b ;
     }
 
@@ -21,12 +21,14 @@ int main() {
             cout << x;
             break;
         }
-        else if (f(a)*f(x)<0) {
-            b = x;
-        }
         else {
-            a = x;
-                }
+             if(f(a) * f(x) < 0){
+                b = x;}
+             else {
+                 a = x;
+             }
+        }
+
             err = abs((b-a)/2);
     }
     while (err>= 1e-6);
